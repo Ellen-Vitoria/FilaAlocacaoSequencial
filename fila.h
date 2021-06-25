@@ -27,7 +27,8 @@ public:
     //Inserir
     void inserir(Tipo x){
         fim++;
-        if(fim == tamanho) { //Quando posição de Fim chegar no valor do tamanho
+        //Quando posição de Fim chegar no valor do tamanho
+        if(fim == tamanho) {
             fim = 0;
         }
         v[fim] = x;
@@ -38,7 +39,8 @@ public:
     Tipo remover(){
         Tipo temp = v[inicio]; //Guardar valor inicial na variável temporária
         inicio++;
-        if(inicio == tamanho){ //Quando posição de Início chegar no valor do tamanho
+        //Quando posição de Início chegar no valor do tamanho
+        if(inicio == tamanho){
             inicio = 0;
         }
         qtde--;
@@ -51,7 +53,7 @@ public:
     }
 
     bool filaCheia(){
-        return qtde == tamanho;
+        return qtde == tamanho; //Se Quantidade for igual ao tamanho da fila
     }
 
     bool filaVazia(){
